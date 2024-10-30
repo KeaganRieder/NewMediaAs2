@@ -1,0 +1,21 @@
+/* 
+----------------------------------------------------------------
+file contains definitions for variables used in 
+styling the site, such as thing like colors
+----------------------------------------------------------------
+*/
+
+:root {
+    /* backgrounds */
+    --mainBG: #808080;
+    --headerBG: #ffffff;
+
+    /* text */
+    --pTextColor1: #000000;
+    --pTextColo2: #000000;
+
+    --headerTextColor: #000000;
+    --SubHeaderTextColor: #000000;
+
+    /* fonts info */
+}

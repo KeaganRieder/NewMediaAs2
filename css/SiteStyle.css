@@ -1,0 +1,42 @@
+/* 
+----------------------------------------------------------------
+file contains definitions for styles that relate to the 
+overall style of the site
+----------------------------------------------------------------
+*/
+/* importing other css files */
+@import url(variables.css);
+
+
+/* importing other css files */
+body {
+    background-color: var(--mainBG);
+
+}
+
+.phaseGirdContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+/* 
+----------------------------------------------------------------
+styles for index.html
+----------------------------------------------------------------
+*/
+
+.planningStepsGrid{
+    display: grid;
+    grid-template-columns: repeat(7 , 1fr);
+    /* grid-gap: 10px;
+    padding: 10px; */
+}
+
+/* adding responsive design */
+
+@media screen and (max-width: 850px) {
+ /* todo */
+    
+}
