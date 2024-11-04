@@ -135,3 +135,62 @@ phase page content
     /* setting text style */
     font-size: 20px;
 }
+
+/* 
+----------------------------------------------------------------
+adding responsive design 
+----------------------------------------------------------------
+*/
+@media screen and (max-width: 1000px) {
+/* style used to determine layout of content for planning phase pages*/
+.phaseLayoutContainer {
+    /* setting anchors */
+    text-align: center;
+    justify-content: center;
+
+    /* setting grid */
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: .5fr 3fr .5fr;
+    grid-gap: 0px;
+
+    /* grid-gap: 10px; */
+
+    /* setting size */
+    height: 75%;
+
+    /* setting padding and margins */
+    /* padding: 10px;
+    margin-bottom: 10px; */
+}
+    .phaseLayoutContainer nav  {
+        /* setting anchors and layout */
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        text-justify: center; 
+
+    
+        /* background info */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size:  cover;
+   
+    }
+    
+    .phaseLayoutContainer nav a {
+        /* setting anchors and layout */
+        justify-content: center;  
+    }
+    
+    /* makes the background be road point left */
+    .leftRoadBackground{
+        background-image: url(../images/verticalRoadU.png);
+    }
+    /* makes the background be road point left */
+    .rightRoadBackground{
+        background-image: url(../images/verticalRoadD.png);
+    }
+
+}

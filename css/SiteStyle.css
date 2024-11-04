@@ -12,9 +12,8 @@ overall style of the site
 body {
     overflow-y: hidden;
     background-color: var(--mainBG);
-    height: 100vh;
-    /* margin-bottom: 20px; */
-
+    height: 90vh;
+    /* margin-bottom: 10px; */
 }
 
 /* 
@@ -126,9 +125,14 @@ adding responsive design
 */
 @media screen and (max-width: 1000px) {
 
+    body {
+        overflow-y: auto;
+        background-color: var(--mainBG);
+        height: 100%;
+    }
     /* 
-    container for holding overview of site navigation
-    this is used in index.html 
+        container for holding overview of site navigation
+        this is used in index.html 
     */
     .roadMapContainer {
         /* setting anchors */
@@ -146,7 +150,7 @@ adding responsive design
 
     .betweenPhaseTab {
         /* setting background */
-        background-image: url(../images/verticalRoad.png);
+        background-image: url(../images/verticalRoadD.png);
         background-position: center;
         background-size: cover;
     }
