@@ -6,37 +6,149 @@ overall style of the site
 */
 /* importing other css files */
 @import url(variables.css);
-
+@import url(PhasePageStyles.css);
 
 /* importing other css files */
 body {
+    overflow-y: hidden;
     background-color: var(--mainBG);
+    height: 100vh;
+    /* margin-bottom: 20px; */
 
-}
-
-.phaseGirdContainer{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 10px;
-    padding: 10px;
 }
 
 /* 
 ----------------------------------------------------------------
 styles for index.html
+also this is styles for navigation tabs 
 ----------------------------------------------------------------
 */
 
-.planningStepsGrid{
-    display: grid;
-    grid-template-columns: repeat(7 , 1fr);
-    /* grid-gap: 10px;
-    padding: 10px; */
+/* style for title and header */
+.title {
+    text-align: center;
+    font-size: 2em;
+    color: var(--mainText);
+    padding: 5px;
 }
 
-/* adding responsive design */
+/* 
+    container for holding overview of site navigation
+    this is used in index.html
+*/
+.roadMapContainer {
+    /* setting anchors */
+    text-align: center;
+    justify-content: center;
+    overflow-y:hidden;
 
-@media screen and (max-width: 850px) {
- /* todo */
-    
+    /* setting grid */
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 0px;
+
+     /* setting size */
+     /* height: 80%; */
+
+    /* setting padding and margins */
+    /* padding: 20px; */
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+
+}
+
+.roadMapContainer a {
+    /* setting margins and padding */
+    padding-top: 120%;
+    padding-bottom: 120%;
+
+}
+
+.roadMapContainer div {
+    /* setting margins and padding */
+    padding-top: 120%;
+    padding-bottom: 120%;
+}
+
+.roadMapContainer a h2 {
+    /* layout and anchors */
+    align-self: center;
+
+    /* font style */
+    font-size: 40px;
+    /* setting size */
+    width: 100%;
+    /* height: 200px ; */
+    /* setting padding and margins */
+    margin-top: 20px;
+}
+
+/* nav tabs and between them styles */
+.betweenPhaseTab {
+    /* setting background */
+    background-image: url(../images/horizontalRoadR.png);
+    background-position: center;
+    background-size: cover;
+
+}
+
+/* styles used to determine the background of teh different phase sections */
+.phase1Tab {
+    /* setting background */
+    background-color: black;
+    background-size: cover;
+}
+
+.phase2Tab {
+    /* setting background */
+    background-color: black;
+    background-size: cover;
+}
+
+.phase3Tab {
+    /* setting background */
+    background-color: black;
+    background-size: cover;
+}
+
+.phase4Tab {
+    /* setting background */
+    background-color: black;
+    background-size: cover;
+}
+
+
+/* 
+----------------------------------------------------------------
+adding responsive design 
+----------------------------------------------------------------
+*/
+@media screen and (max-width: 1000px) {
+
+    /* 
+    container for holding overview of site navigation
+    this is used in index.html 
+    */
+    .roadMapContainer {
+        /* setting anchors */
+        text-align: center;
+        justify-content: center;
+
+        /* setting grid */
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 0px;
+
+        /* setting size */
+        height: 100%;
+    }
+
+    .betweenPhaseTab {
+        /* setting background */
+        background-image: url(../images/verticalRoad.png);
+        background-position: center;
+        background-size: cover;
+    }
+
 }

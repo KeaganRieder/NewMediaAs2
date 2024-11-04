@@ -1,0 +1,137 @@
+/*
+----------------------------------------------------------------
+    this css file defines styles used to determine the look of
+    the different phase pages
+----------------------------------------------------------------
+*/
+
+@import url(variables.css);
+
+
+/* style for phase headers */
+.phaseTitle {
+    /* setting content layout */
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-gap: 20px;
+
+    /* setting padding and margins */
+    padding-top: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+
+    /* padding: 20px; */
+}
+
+/* 
+----------------------------------------------------------------
+phase page header navigation
+----------------------------------------------------------------
+*/
+.phaseTitle nav {
+    /* setting image size */
+
+    /* setting text */
+    font-size: 30px;
+}
+.phaseTitle nav image {
+    /* setting image size */
+    width: 50px;
+    height: 50px;
+    
+}
+
+/* 
+----------------------------------------------------------------
+phase page contents 
+----------------------------------------------------------------
+*/
+.phaseTitle h1 {
+    /* setting display */
+    text-align: center;
+    /* setting text */
+    font-size: 60px;
+}
+
+/* style used to determine layout of content for planning phase pages*/
+.phaseLayoutContainer {
+    /* setting anchors */
+    text-align: center;
+    justify-content: center;
+
+    /* setting grid */
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-gap: 10px;
+
+    /* setting size */
+    height: 75%;
+
+    /* setting padding and margins */
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+/* 
+----------------------------------------------------------------
+phase page content navigation
+----------------------------------------------------------------
+*/
+.phaseLayoutContainer nav  {
+
+    /* setting anchors and layout */
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    /* background info */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:  cover;
+
+    /* setting margins */
+    margin-bottom: 10px;
+
+}
+
+.phaseLayoutContainer nav a {
+    /* setting anchors and layout */
+    justify-content: center;   
+}
+
+/* makes the background be road point left */
+.leftRoadBackground{
+    background-image: url(../images/horizontalRoadL.png);
+}
+/* makes the background be road point left */
+.rightRoadBackground{
+    background-image: url(../images/horizontalRoadR.png);
+}
+
+/* 
+----------------------------------------------------------------
+phase page content 
+----------------------------------------------------------------
+*/
+
+/* style that controls the phase content */
+.phaseContentContainer {
+    /* setting display */
+    overflow-y: hidden;
+    overflow-y: auto;
+    text-align: center;
+    justify-content: center;
+
+    /* setting size */
+    /* height: 80%; */
+    /* setting margins */
+    margin-top: 20px;
+}
+
+.phaseContentContainer p {
+    /* setting text style */
+    font-size: 20px;
+}
