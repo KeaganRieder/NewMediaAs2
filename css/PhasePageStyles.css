@@ -35,11 +35,12 @@ phase page header navigation
     /* setting text */
     font-size: 30px;
 }
+
 .phaseTitle nav image {
     /* setting image size */
     width: 50px;
     height: 50px;
-    
+
 }
 
 /* 
@@ -63,7 +64,7 @@ phase page contents
     /* setting grid */
     display: grid;
     grid-template-columns: 1fr 5fr 1fr;
-    grid-gap: 10px;
+    grid-gap: 0px;
 
     /* setting size */
     height: 75%;
@@ -78,10 +79,8 @@ phase page contents
 phase page content navigation
 ----------------------------------------------------------------
 */
-.phaseLayoutContainer nav  {
-
+.phaseLayoutContainer nav {
     /* setting anchors and layout */
-
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -90,24 +89,30 @@ phase page content navigation
     /* background info */
     background-position: center;
     background-repeat: no-repeat;
-    background-size:  cover;
+    background-size: cover;
+
+    /*reset border style to get rid of other orientations */
+    border: none;
+
+    border-top: 10px solid;
+    border-bottom: 10px solid;
 
     /* setting margins */
     margin-bottom: 10px;
-
 }
 
 .phaseLayoutContainer nav a {
     /* setting anchors and layout */
-    justify-content: center;   
+    justify-content: center;
 }
 
 /* makes the background be road point left */
-.leftRoadBackground{
+.leftRoadBackground {
     background-image: url(../images/horizontalRoadL.png);
 }
+
 /* makes the background be road point left */
-.rightRoadBackground{
+.rightRoadBackground {
     background-image: url(../images/horizontalRoadR.png);
 }
 
@@ -122,13 +127,18 @@ phase page content
     /* setting display */
     overflow-y: hidden;
     overflow-y: auto;
-    text-align: center;
+    text-align: left;
     justify-content: center;
 
-    /* setting size */
-    /* height: 80%; */
+    /* setting background */
+    border-left: 10px solid;
+    border-right: 10px solid;
+
     /* setting margins */
-    margin-top: 20px;
+    padding-left: 20px;
+    padding-right: 10px;
+
+    margin-bottom: 10px;
 }
 
 .phaseContentContainer p {
@@ -142,55 +152,36 @@ adding responsive design
 ----------------------------------------------------------------
 */
 @media screen and (max-width: 1000px) {
-/* style used to determine layout of content for planning phase pages*/
-.phaseLayoutContainer {
-    /* setting anchors */
-    text-align: center;
-    justify-content: center;
 
-    /* setting grid */
-    display: grid;
-    grid-template-columns: 1fr ;
-    grid-template-rows: .5fr 3fr .5fr;
-    grid-gap: 0px;
-
-    /* grid-gap: 10px; */
-
-    /* setting size */
-    height: 75%;
-
-    /* setting padding and margins */
-    /* padding: 10px;
-    margin-bottom: 10px; */
-}
-    .phaseLayoutContainer nav  {
-        /* setting anchors and layout */
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
+    /* style used to determine layout of content for planning phase pages*/
+    .phaseLayoutContainer {
+        /* setting anchors */
+        text-align: center;
         justify-content: center;
-        text-justify: center; 
 
-    
-        /* background info */
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size:  cover;
-   
-    }
-    
-    .phaseLayoutContainer nav a {
-        /* setting anchors and layout */
-        justify-content: center;  
-    }
-    
-    /* makes the background be road point left */
-    .leftRoadBackground{
-        background-image: url(../images/verticalRoadU.png);
-    }
-    /* makes the background be road point left */
-    .rightRoadBackground{
-        background-image: url(../images/verticalRoadD.png);
+        /* setting grid */
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 0px;
     }
 
+    .phaseLayoutContainer nav {
+        /* Hide roads to next phase making back to outline only possible */
+        display: none;
+    }
+
+    .phaseContentContainer {
+        /* setting display */
+        overflow-y: hidden;
+        overflow-y: auto;
+        text-align: left;
+        justify-content: center;
+
+        /* setting background */
+
+        border: none;
+        /* setting margins */
+        padding-left: 20px;
+        padding-right: 10px;
+    }
 }
