@@ -25,17 +25,43 @@ body {
 
 /* style for title and header */
 .title {
+    /* display styes */
     text-align: center;
-    font-size: 2em;
-    color: var(--mainText);
+    /* setting margins and padding */
+
     padding: 5px;
+    margin: 5px;
+}
+
+.title h1 {
+    /* setting text style */
+    font-size: 40px;
+    color: var(--mainText);
+
+    /* setting margins and padding */
+    padding: 5px;
+    margin: 0px;
+
+}
+
+.title h2 {
+    /* setting text style */
+    font-size: 40px;
+    color: var(--mainText);
+
+    /* setting margins and padding */
+    padding: 5px;
+    margin: 0px;
+    padding: 0px;
+    margin: 0px;
+
 }
 
 /* 
-    container for holding overview of site navigation
-    this is used in index.html
+   container which holds outline that can be used to navigate to different
+   section in the site
 */
-.roadMapContainer {
+.outlineContainer {
     /* setting anchors */
     text-align: center;
     justify-content: center;
@@ -44,7 +70,9 @@ body {
     /* setting grid */
     display: grid;
     grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 1fr;
     grid-gap: 0px;
+    height: 70vh;
 
     /* setting padding and margins */
     margin-left: 20px;
@@ -52,66 +80,47 @@ body {
     margin-bottom: 20px;
 }
 
-#roadMapSections{
-   /* setting margins and padding */
-   padding-top: 100%;
-   padding-bottom: 100%;
-}
+/* sections in outline */
+#outlineSections {
+    /* setting display style */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 
-
-.roadMapContainer a h2 {
-    /* layout and anchors */
-    align-self: center;
-
-    /* font style */
-    font-size: 40px;
     /* setting size */
-    width: 100%;
-    /* height: 200px ; */
-    /* setting padding and margins */
-    margin-top: 20px;
+    height: 100%;
 }
 
-/* nav tabs and between them styles */
-.betweenPhaseTab {
+/* section that acts as divider for nav sections in outline */
+.dividerSection {
+    /* setting display */
+    align-self: center;
     /* setting background */
     background-image: url(../images/horizontalRoadR.png);
     background-position: center;
-    /* background-repeat: no-repeat; */
-    background-size: cover;
+    background-size: auto 100%;
 }
 
-/* styles used to determine the background of teh different phase sections */
-.phaseTabs {
+/* section in outline that is used to navigate the site */
+.sectionNav {
     /* setting background */
-    border: 10px solid;
-
-}
-
-.phase1Tab {
-    /* setting background */
+    border: 10px solid black;
     background-color: black;
-    background-size: cover;
+    background-size: auto 100%;
+    height: 100%;
 }
 
-.phase2Tab {
-    /* setting background */
-    background-color: black;
-    background-size: cover;
+.sectionNav a {
+    /* setting font style */
+    font-size: 20px;
+    color: var(--mainText);
 }
 
-.phase3Tab {
-    /* setting background */
-    background-color: black;
-    background-size: cover;
+.sectionNav a:hover {
+    /* setting font style */
+    color: var(--navHovColor);
 }
-
-.phase4Tab {
-    /* setting background */
-    background-color: black;
-    background-size: cover;
-}
-
 
 /* 
 ----------------------------------------------------------------
@@ -125,32 +134,46 @@ adding responsive design
         background-color: var(--mainBG);
     }
 
-    /* 
-        container for holding overview of site navigation
-        this is used in index.html 
-    */
-    .roadMapContainer {
+    .outlineContainer {
         /* setting anchors */
         text-align: center;
         justify-content: center;
+        overflow-y: scroll;
 
         /* setting grid */
         display: grid;
         grid-template-columns: 1fr;
+
+        grid-gap: 0px;
+        height: 80vh;
+
+        /* setting padding and margins */
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 20px;
     }
 
-    #roadMapSections{
-        /* setting margins and padding */
+    /* sections in outline */
+    #outlineSections {
+        /* setting display style */
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+
+        /* setting size */
+        /* setting padding */
         padding-top: 50%;
         padding-bottom: 50%;
-     }
-     
+    }
 
-    .betweenPhaseTab {
+    .dividerSection {
+        /* setting display */
+
         /* setting background */
         background-image: url(../images/verticalRoadD.png);
         background-position: center;
+        background-repeat: no-repeat;
         background-size: cover;
     }
-
 }

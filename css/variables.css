@@ -17,5 +17,11 @@ styling the site, such as thing like colors
     --headerTextColor: #000000;
     --SubHeaderTextColor: #000000;
 
+    --navTextOutlineColor: #ffffff;
+    /* --navTextOutlineColor: #787878;  swap later*/
+
+
+    --navHovColor: #21109f;
+
     /* fonts info */
 }
