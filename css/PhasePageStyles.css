@@ -19,14 +19,10 @@ phase page header styles
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 0px;
 
-    height: 20vh;
+    height: 30vh;
 
     /* setting padding and margins */
-    margin-top: 20px;
-
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 20px;
+    margin: 20px;
 }
 
 .phaseTitle {
@@ -36,6 +32,9 @@ phase page header styles
     background-position: center;
     background-repeat: no-repeat;
     background-size: auto 100%;
+    /* setting margins */
+    margin: 10px;
+
 }
 
 #phaseHeaderText {
@@ -52,7 +51,7 @@ phase page header styles
     /* setting text style */
     font-size: 50px;
     /* setting margins */
-    margin: 20px;
+    /* margin: 20px; */
     padding: 0px;
 }
 
@@ -80,23 +79,18 @@ phase page header styles
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    text-align: center;
 
     /* background info */
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 80% 100%;
+    background-size: 100% 100%;
+
+    /* setting size */
+    height: 100%;
 }
 
-.phaseHeader a {
 
-    /* setting font style */
-    color: var(--headerTextColor);
-    text-shadow: 2px 2px var(--navTextOutlineColor);
-}
-
-.phaseHeader a:hover {
-    color: var(--navHovColor);
-}
 
 /* 
 ----------------------------------------------------------------
@@ -104,31 +98,74 @@ phase page contents
 ----------------------------------------------------------------
 */
 
-.phaseContents {
+.phaseContentContainer {
     /* setting alignment, anchors and display */
 
     /* setting size */
-    height: 70vh;
+    height: 60vh;
 
     /* setting padding and margins */
-    margin-left: 30px;
-    margin-right: 30px;
     margin: 20px;
+    margin-top: 30px;
 
     padding-left: 30px;
     padding-right: 30px;
 }
 
-.phaseContents p {
+/* make contents be scroll able */
+.phaseContents {
     /* setting alignment and anchors */
-    overflow-y: scroll;
-
-    /* setting background */
-
+    overflow-y: auto;
     /* setting size */
     height: 100%;
-    /* setting padding and margins */
+
+    /* setting overall font info */
+    font-size: 20px;
+    /* setting margins */
+    margin-bottom: 10px;
 }
+
+.phaseContents h4 {
+    /* setting font info */
+    font-size: 25px;
+    margin-bottom: 10px;
+
+    margin-top: 5px;
+    
+    padding: 0px;
+}
+.phaseContents h5 {
+    /* setting font info */
+    font-size: 20px;
+    margin-bottom: 10px;
+
+    margin-top: 5px;
+    
+    padding: 0px;
+}
+
+
+.phaseContents p {
+    /* setting font info */
+    font-size: 20px;
+
+    /* setting margins */
+    margin: 0px;
+    padding: 0px;
+}
+
+.phaseContents li {
+    /* setting font info */
+    font-size: 20px;
+
+    /* setting margins */
+    margin: 0px;
+
+    margin-top: 10px;
+    
+    padding: 0px;
+}
+
 
 /* 
 ----------------------------------------------------------------
@@ -153,8 +190,7 @@ adding responsive design
 */
 @media screen and (max-width: 1000px) {
 
-    /* style used to determine layout of content for planning phase pages*/
-    .phaseLayoutContainer {
+    style used to determine layout of content for planning phase pages .phaseLayoutContainer {
         /* setting anchors */
         text-align: center;
         justify-content: center;

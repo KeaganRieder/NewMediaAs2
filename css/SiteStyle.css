@@ -8,29 +8,50 @@ overall style of the site
 @import url(variables.css);
 @import url(PhasePageStyles.css);
 
-/* importing other css files */
+/* global styles */
 body {
     overflow-y: hidden;
 
     background-color: var(--mainBG);
+    
     height: 90vh;
+}
+
+a {
+    /* setting display style */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    /* setting font style */
+    font-size: 30px;
+    color: var(--headerTextColor);
+    text-shadow: 2px 2px var(--navTextOutlineColor);
+    /* setting margins */
+    margin: 10px;
+}
+
+a:hover {
+    color: var(--navHovColor);
 }
 
 /* 
 ----------------------------------------------------------------
     styles for index.html
-    also this is styles for navigation tabs 
 ----------------------------------------------------------------
 */
-
 /* style for title and header */
 .title {
     /* display styes */
     text-align: center;
-    /* setting margins and padding */
 
+    /* setting margins and padding */
     padding: 5px;
     margin: 5px;
+    margin-bottom: 20px;
+
 }
 
 .title h1 {
@@ -74,10 +95,15 @@ body {
     grid-gap: 0px;
     height: 70vh;
 
+    /* setting background and shadows */
+    box-shadow: 0 0px 20px 10px rgba(0, 0, 0, 0.5);
+
+
     /* setting padding and margins */
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 0px;
+    margin-right: 0px;
     margin-bottom: 20px;
+
 }
 
 /* sections in outline */
@@ -88,14 +114,18 @@ body {
     align-items: center;
     justify-content: center;
 
+    /* setting background */
+  
     /* setting size */
     height: 100%;
+
 }
 
 /* section that acts as divider for nav sections in outline */
 .dividerSection {
     /* setting display */
     align-self: center;
+
     /* setting background */
     background-image: url(../images/horizontalRoadR.png);
     background-position: center;
@@ -105,29 +135,20 @@ body {
 /* section in outline that is used to navigate the site */
 .sectionNav {
     /* setting background */
-    border: 10px solid black;
-    background-color: black;
+    background-image: url(../images/horizontalRoad.png);
+    background-position: center;
     background-size: auto 100%;
-    height: 100%;
+    
+    height: 50%;
 }
 
-.sectionNav a {
-    /* setting font style */
-    font-size: 20px;
-    color: var(--mainText);
-}
-
-.sectionNav a:hover {
-    /* setting font style */
-    color: var(--navHovColor);
-}
 
 /* 
 ----------------------------------------------------------------
 adding responsive design 
 ----------------------------------------------------------------
 */
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1250px) {
 
     body {
         overflow-y: visible;
@@ -148,9 +169,17 @@ adding responsive design
         height: 80vh;
 
         /* setting padding and margins */
-        margin-left: 20px;
-        margin-right: 20px;
+
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-bottom: 30px;
+
         margin-bottom: 20px;
+    }
+
+    #outlineSections {
+        /* setting size */
+        height: auto;
     }
 
     /* sections in outline */
