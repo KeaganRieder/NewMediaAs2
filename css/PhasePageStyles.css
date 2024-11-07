@@ -21,6 +21,9 @@ phase page header styles
 
     height: 30vh;
 
+    /* setting background */
+    box-shadow: 0 0px 20px 10px rgba(0, 0, 0, 0.5);
+
     /* setting padding and margins */
     margin: 20px;
 }
@@ -29,12 +32,11 @@ phase page header styles
     /* setting anchors and layout */
     display: grid;
     /* background info */
+    background-image: url(../images/horizontalRoad.png);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: auto 100%;
-    /* setting margins */
-    margin: 10px;
-
+    background-size: 110% 100%;
+ 
 }
 
 #phaseHeaderText {
@@ -56,10 +58,16 @@ phase page header styles
 }
 
 .phaseHeader h2 {
+    /* display style  */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
     /* setting text style */
     color: var(--headerTextColor);
 
     font-size: 30px;
+
     /* setting margins */
     margin: 0px;
     padding: 0px;
@@ -84,13 +92,11 @@ phase page header styles
     /* background info */
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 120% 100%;
 
     /* setting size */
     height: 100%;
 }
-
-
 
 /* 
 ----------------------------------------------------------------
@@ -131,19 +137,19 @@ phase page contents
     margin-bottom: 10px;
 
     margin-top: 5px;
-    
+
     padding: 0px;
 }
+
 .phaseContents h5 {
     /* setting font info */
     font-size: 20px;
     margin-bottom: 10px;
 
     margin-top: 5px;
-    
+
     padding: 0px;
 }
-
 
 .phaseContents p {
     /* setting font info */
@@ -162,7 +168,7 @@ phase page contents
     margin: 0px;
 
     margin-top: 10px;
-    
+
     padding: 0px;
 }
 
@@ -190,15 +196,62 @@ adding responsive design
 */
 @media screen and (max-width: 1000px) {
 
-    style used to determine layout of content for planning phase pages .phaseLayoutContainer {
-        /* setting anchors */
+    .phaseTitle {
+        /* setting anchors and layout */
+        display: grid;
+        /* background info */
+        background-image: url(../images/horizontalRoad.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+     
+    }
+
+    .phaseHeader {
+        /* setting content layout */
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 0px;
+    
+        height: 30vh;
+    
+        /* setting padding and margins */
+        margin: 20px;
+        margin-bottom: 60px;
+    }
+    .phaseHeaderNav {
+        /* setting display */
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    
+        /* background info */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    
+        /* setting size */
+        height: 100%;
+    }
+
+    /* style used to determine layout of content for planning phase pages */
+    .phaseLayoutContainer {
+        /* setting anchors and display */
         text-align: center;
         justify-content: center;
+
+        /* setting size */
+        height: 50vh;
 
         /* setting grid */
         display: grid;
         grid-template-columns: 1fr;
         grid-gap: 0px;
+
+        /* setting margins and padding */
+        margin-bottom: 20px;
     }
 
     .phaseLayoutContainer nav {
@@ -214,8 +267,10 @@ adding responsive design
         justify-content: center;
 
         /* setting background */
-
         border: none;
+
+        /* setting size */
+
         /* setting margins */
         padding-left: 20px;
         padding-right: 10px;

@@ -205,4 +205,16 @@ adding responsive design
         background-repeat: no-repeat;
         background-size: cover;
     }
+
+    .sectionNav {
+        /* setting background */
+        background-image: url(../images/verticalRoad.png);
+        background-position: center;
+        background-repeat: no-repeat;
+
+        background-size: cover;
+
+        
+        height: 50%;
+    }
 }
