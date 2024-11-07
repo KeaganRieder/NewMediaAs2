@@ -98,7 +98,6 @@ a:hover {
     /* setting background and shadows */
     box-shadow: 0 0px 20px 10px rgba(0, 0, 0, 0.5);
 
-
     /* setting padding and margins */
     margin-left: 0px;
     margin-right: 0px;
@@ -148,7 +147,7 @@ a:hover {
 adding responsive design 
 ----------------------------------------------------------------
 */
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1500px) {
 
     body {
         overflow-y: visible;
