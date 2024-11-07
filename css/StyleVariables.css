@@ -5,23 +5,21 @@ styling the site, such as thing like colors
 ----------------------------------------------------------------
 */
 
+/* colors */
 :root {
     /* backgrounds */
-    --mainBG: #808080;
+    --mainBG: #4C7C6D;
+    --contentBG: #adacac;
+
     --headerBG: #ffffff;
 
     /* text */
     --pTextColor1: #000000;
     --pTextColo2: #000000;
 
-    --headerTextColor: #000000;
-    --SubHeaderTextColor: #000000;
+    --headerTextColor: #333333;
+    --contentHeaderTextColor: #242323;
 
     --navTextOutlineColor: #ffffff;
-    /* --navTextOutlineColor: #787878;  swap later*/
-
-
-    --navHovColor: #21109f;
-
-    /* fonts info */
+    --navHovColor: #2e7ebe;
 }

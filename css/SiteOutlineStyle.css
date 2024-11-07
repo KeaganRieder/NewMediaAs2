@@ -1,0 +1,176 @@
+/* 
+----------------------------------------------------------------
+    defines styles for index.html which is meant to act as the
+    site outline. it contains the overall road map/path
+    to follow to get started learning about urban planning
+----------------------------------------------------------------
+*/
+/* style for title and header */
+.title {
+    /* display styes */
+    text-align: center;
+    color: var(--headerTextColor);
+    /* setting margins and padding */
+    padding: 5px;
+    margin: 5px;
+    margin-bottom: 20px;
+
+}
+
+.title h1 {
+    /* setting text style */
+    font-size: 40px;
+    color: var(--mainText);
+
+    /* setting margins and padding */
+    padding: 5px;
+    margin: 0px;
+
+}
+
+.title h2 {
+    /* setting text style */
+    font-size: 40px;
+    color: var(--mainText);
+
+    /* setting margins and padding */
+    padding: 5px;
+    margin: 0px;
+    padding: 0px;
+    margin: 0px;
+
+}
+
+/* 
+   container which holds outline that can be used to navigate to different
+   section in the site
+*/
+.outlineContainer {
+    /* setting anchors */
+    text-align: center;
+    justify-content: center;
+    overflow-y: hidden;
+
+    /* setting grid */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 0px;
+    height: 70vh;
+
+    /* setting background and shadows */
+    box-shadow: 0 0px 20px 10px rgba(0, 0, 0, 0.5);
+
+    /* setting padding and margins */
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 20px;
+}
+
+/* sections in outline */
+#outlineSections {
+    /* setting display style */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    /* setting background */
+
+    /* setting size */
+    height: 100%;
+
+}
+
+/* section that acts as divider for nav sections in outline */
+.dividerSection {
+    /* setting display */
+    align-self: center;
+
+    /* setting background */
+    background-image: url(../images/horizontalRoadR.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+}
+
+/* section in outline that is used to navigate the site */
+.sectionNav {
+    /* setting background */
+    background-image: url(../images/horizontalRoad.png);
+    background-position: center;
+    background-size: auto 100%;
+
+    height: 50%;
+}
+
+/* 
+----------------------------------------------------------------
+adding responsive design 
+----------------------------------------------------------------
+*/
+@media screen and (max-width: 1500px) {
+
+    .outlineContainer {
+        /* setting anchors */
+        text-align: center;
+        justify-content: center;
+        overflow-y: scroll;
+
+        /* setting grid */
+        display: grid;
+        grid-template-columns: 1fr;
+
+        grid-gap: 0px;
+        height: 80vh;
+
+        /* setting padding and margins */
+
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-bottom: 30px;
+
+        margin-bottom: 20px;
+    }
+
+    #outlineSections {
+        /* setting size */
+        height: auto;
+    }
+
+    /* sections in outline */
+    #outlineSections {
+        /* setting display style */
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+
+        /* setting size */
+        /* setting padding */
+        padding-top: 50%;
+        padding-bottom: 50%;
+    }
+
+    .dividerSection {
+        /* setting display */
+
+        /* setting background */
+        background-image: url(../images/verticalRoadD.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .sectionNav {
+        /* setting background */
+        background-image: url(../images/verticalRoad.png);
+        background-position: center;
+        background-repeat: no-repeat;
+
+        background-size: cover;
+
+
+        height: 50%;
+    }
+}

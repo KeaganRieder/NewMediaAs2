@@ -1,20 +1,32 @@
 /* 
 ----------------------------------------------------------------
-file contains definitions for styles that relate to the 
-overall style of the site
+file defines the default styles for the site, which are 
+are used or get overridden in other file
 ----------------------------------------------------------------
 */
 /* importing other css files */
-@import url(variables.css);
+@import url(StyleVariables.css);
+@import url(SiteOutlineStyle.css);
 @import url(PhasePageStyles.css);
+@import url(ImageStyles.css);
 
-/* global styles */
+/* 
+----------------------------------------------------------------
+global styles and fall backs
+----------------------------------------------------------------
+ */
 body {
+    /* setting display */
     overflow-y: hidden;
 
+    /* setting background */
     background-color: var(--mainBG);
-    
+
+    /* setting size */
     height: 90vh;
+
+    /* setting font */
+    color: var(--pTextColor1);
 }
 
 a {
@@ -26,12 +38,32 @@ a {
     text-align: center;
 
     /* setting font style */
-    font-size: 30px;
+    /* font-size: 30px; */
     color: var(--headerTextColor);
-    text-shadow: 2px 2px var(--navTextOutlineColor);
+
+    text-shadow: 1px 1px var(--navTextOutlineColor);
+
     /* setting margins */
     margin: 10px;
 }
+.sources {
+    /* setting display style */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: normal;
+    justify-content: left;
+    text-align: left;
+
+    /* setting font style */
+    font-size: 30px;
+    /* color: var(--headerTextColor); */
+
+    text-shadow: none;
+
+    /* setting margins */
+    margin: 10px;
+}
+
 
 a:hover {
     color: var(--navHovColor);
@@ -39,181 +71,94 @@ a:hover {
 
 /* 
 ----------------------------------------------------------------
-    styles for index.html
+setting text fall back/default style 
 ----------------------------------------------------------------
 */
-/* style for title and header */
-.title {
-    /* display styes */
-    text-align: center;
-
-    /* setting margins and padding */
-    padding: 5px;
-    margin: 5px;
-    margin-bottom: 20px;
-
+h1 {
+    font-family: "Roboto Serif", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 118.4,
+        "GRAD" 20;
+    font-size: 60px;
 }
 
-.title h1 {
-    /* setting text style */
+h2 {
+    font-family: "Roboto Serif", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 118.4,
+        "GRAD" 20;
     font-size: 40px;
-    color: var(--mainText);
-
-    /* setting margins and padding */
-    padding: 5px;
-    margin: 0px;
-
 }
 
-.title h2 {
-    /* setting text style */
+h3 {
+    font-family: "Roboto Serif", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 118.4,
+        "GRAD" 20;
     font-size: 40px;
-    color: var(--mainText);
-
-    /* setting margins and padding */
-    padding: 5px;
-    margin: 0px;
-    padding: 0px;
-    margin: 0px;
 
 }
 
-/* 
-   container which holds outline that can be used to navigate to different
-   section in the site
-*/
-.outlineContainer {
-    /* setting anchors */
-    text-align: center;
-    justify-content: center;
-    overflow-y: hidden;
-
-    /* setting grid */
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: 1fr;
-    grid-gap: 0px;
-    height: 70vh;
-
-    /* setting background and shadows */
-    box-shadow: 0 0px 20px 10px rgba(0, 0, 0, 0.5);
-
-    /* setting padding and margins */
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-bottom: 20px;
+h4 {
+    font-family: "Roboto Serif", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 118.4,
+        "GRAD" 20;
+    color: var(--contentHeaderTextColor);
+    font-size: 25px;
+}
+h4 {
+    font-family: "Roboto Serif", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 118.4,
+        "GRAD" 20;
+    color: var(--contentHeaderTextColor);
+    font-size: 25px;
 
 }
 
-/* sections in outline */
-#outlineSections {
-    /* setting display style */
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+p {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: var(--pTextColor1);
+    font-size: 25px;
+}
 
-    /* setting background */
-  
-    /* setting size */
-    height: 100%;
+ul {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: var(--pTextColor1);
+    font-size: 25px;
+
+}
+cite a{
+    font-size: 20px;
+    color: black;
+    text-shadow: none;
 
 }
 
-/* section that acts as divider for nav sections in outline */
-.dividerSection {
-    /* setting display */
-    align-self: center;
-
-    /* setting background */
-    background-image: url(../images/horizontalRoadR.png);
-    background-position: center;
-    background-size: auto 100%;
-}
-
-/* section in outline that is used to navigate the site */
-.sectionNav {
-    /* setting background */
-    background-image: url(../images/horizontalRoad.png);
-    background-position: center;
-    background-size: auto 100%;
-    
-    height: 50%;
-}
-
-
-/* 
-----------------------------------------------------------------
-adding responsive design 
-----------------------------------------------------------------
-*/
 @media screen and (max-width: 1500px) {
 
     body {
-        overflow-y: visible;
+        overflow-y: hidden;
         background-color: var(--mainBG);
-    }
-
-    .outlineContainer {
-        /* setting anchors */
-        text-align: center;
-        justify-content: center;
-        overflow-y: scroll;
-
-        /* setting grid */
-        display: grid;
-        grid-template-columns: 1fr;
-
-        grid-gap: 0px;
-        height: 80vh;
-
-        /* setting padding and margins */
-
-        margin-left: 50px;
-        margin-right: 50px;
-        margin-bottom: 30px;
-
-        margin-bottom: 20px;
-    }
-
-    #outlineSections {
-        /* setting size */
-        height: auto;
-    }
-
-    /* sections in outline */
-    #outlineSections {
-        /* setting display style */
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-
-        /* setting size */
-        /* setting padding */
-        padding-top: 50%;
-        padding-bottom: 50%;
-    }
-
-    .dividerSection {
-        /* setting display */
-
-        /* setting background */
-        background-image: url(../images/verticalRoadD.png);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-
-    .sectionNav {
-        /* setting background */
-        background-image: url(../images/verticalRoad.png);
-        background-position: center;
-        background-repeat: no-repeat;
-
-        background-size: cover;
-
-        
-        height: 50%;
     }
 }
