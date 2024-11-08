@@ -17,13 +17,13 @@ global styles and fall backs
  */
 body {
     /* setting display */
-    overflow-y: hidden;
+    overflow-y: auto;
 
     /* setting background */
     background-color: var(--mainBG);
 
     /* setting size */
-    height: 90vh;
+    /* height: 90vh; */
 
     /* setting font */
     color: var(--pTextColor1);
@@ -46,6 +46,7 @@ a {
     /* setting margins */
     margin: 10px;
 }
+
 .sources {
     /* setting display style */
     display: flex;
@@ -119,7 +120,8 @@ h4 {
     color: var(--contentHeaderTextColor);
     font-size: 25px;
 }
-h4 {
+
+h5 {
     font-family: "Roboto Serif", serif;
     font-optical-sizing: auto;
     font-weight: 600;
@@ -148,17 +150,73 @@ ul {
     font-size: 25px;
 
 }
-cite a{
+/* 
+----------------------------------------------------------------
+off site links
+----------------------------------------------------------------
+*/
+
+.ofSiteLink{
     font-size: 20px;
     color: black;
     text-shadow: none;
-
 }
 
+.inLine{
+    display: inline;
+    flex-wrap: nowrap;
+
+    font-size: 20px;
+    color: black;
+    text-shadow: none;
+}
+
+/* 
+----------------------------------------------------------------
+responsive design
+----------------------------------------------------------------
+*/
 @media screen and (max-width: 1500px) {
 
     body {
         overflow-y: hidden;
         background-color: var(--mainBG);
     }
+    /* 
+----------------------------------------------------------------
+setting text fall back/default style 
+----------------------------------------------------------------
+*/
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+
+    font-size: 20px;
+}
+
+h4 {
+
+    font-size: 25px;
+}
+
+h5 {
+   
+    font-size: 25px;
+
+}
+
+p {
+    font-size: 25px;
+}
+
+ul {
+    font-size: 25px;
+
+}
 }

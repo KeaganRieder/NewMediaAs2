@@ -125,7 +125,7 @@ phase page contents
     /* setting background stuff */
     background-color: var(--contentBG);
     outline: 2px solid black;
-    
+
     /* setting margins */
     padding: 20px;
 
@@ -227,10 +227,10 @@ stye for navigation
     }
 
     /* 
-----------------------------------------------------------------
-stye for content
-----------------------------------------------------------------
-*/
+    ----------------------------------------------------------------
+    stye for content
+    ----------------------------------------------------------------
+    */
     .phaseLayoutContainer {
         /* setting anchors and display */
         text-align: center;
@@ -269,3 +269,4 @@ stye for content
         padding-right: 10px;
     }
 }
+
