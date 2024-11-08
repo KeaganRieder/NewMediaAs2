@@ -38,7 +38,6 @@ a {
     text-align: center;
 
     /* setting font style */
-    /* font-size: 30px; */
     color: var(--headerTextColor);
 
     text-shadow: 1px 1px var(--navTextOutlineColor);
@@ -150,19 +149,20 @@ ul {
     font-size: 25px;
 
 }
+
 /* 
 ----------------------------------------------------------------
 off site links
 ----------------------------------------------------------------
 */
 
-.ofSiteLink{
+.ofSiteLink {
     font-size: 20px;
     color: black;
     text-shadow: none;
 }
 
-.inLine{
+.inLine {
     display: inline;
     flex-wrap: nowrap;
 
@@ -182,41 +182,80 @@ responsive design
         overflow-y: hidden;
         background-color: var(--mainBG);
     }
+
     /* 
 ----------------------------------------------------------------
 setting text fall back/default style 
 ----------------------------------------------------------------
 */
-h1 {
-    font-size: 40px;
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    h4 {
+        font-size: 25px;
+    }
+
+    h5 {
+        font-size: 25px;
+    }
+
+    p {
+        font-size: 25px;
+    }
+
+    ul {
+        font-size: 25px;
+
+    }
 }
 
-h2 {
-    font-size: 30px;
-}
+@media screen and (max-height: 500px) {
 
-h3 {
+    body {
+        overflow-y: hidden;
+        background-color: var(--mainBG);
+    }
 
-    font-size: 20px;
-}
+    /* 
+----------------------------------------------------------------
+setting text fall back/default style 
+----------------------------------------------------------------
+*/
+    h1 {
+        font-size: 30px;
+    }
 
-h4 {
+    h2 {
+        font-size: 30px;
+    }
 
-    font-size: 25px;
-}
+    h3 {
+        font-size: 20px;
+    }
 
-h5 {
-   
-    font-size: 25px;
+    h4 {
+        font-size: 20px;
+    }
 
-}
+    h5 {
+        font-size: 20px;
+    }
 
-p {
-    font-size: 25px;
-}
+    p {
+        font-size: 20px;
+    }
 
-ul {
-    font-size: 25px;
+    ul {
+        font-size: 20px;
 
-}
+    }
 }

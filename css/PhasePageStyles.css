@@ -237,7 +237,7 @@ stye for navigation
         justify-content: center;
 
         /* setting size */
-        height: 50vh;
+        /* height: vh; */
 
         /* setting grid */
         display: grid;
@@ -262,7 +262,7 @@ stye for navigation
         border: none;
 
         /* setting size */
-        height: 55vh;
+        height: 50vh;
 
         /* setting margins */
         padding-left: 20px;
